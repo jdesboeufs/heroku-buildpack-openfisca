@@ -10,13 +10,13 @@
 # This script is invoked by [`bin/compile`](/).
 
 VENDORED_GIT_NAME="npscipy-binaries"
-VENDORED_GIT_REPO="git://github.com/dbrgn/${VENDORED_GIT_NAME}.git"
+VENDORED_GIT_REPO="git://github.com/lell/${VENDORED_GIT_NAME}.git"
 # The location of the pre-compiled atlas/lapack/blas/gfortran binaries.
 VENDORED_BINARIES="npscipy"
 # the location of the bdist of numpy
-VENDORED_NUMPY="numpy-1.7.0"
+VENDORED_NUMPY="numpy-1.7.1"
 # the location of the bdist of scipy
-VENDORED_SCIPY="scipy-0.11.0"
+VENDORED_SCIPY="scipy-0.12.0"
 
 # Syntax sugar.
 source $BIN_DIR/utils
