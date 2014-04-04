@@ -22,7 +22,7 @@ VENDORED_SCIPY="scipy-0.12.0"
 source $BIN_DIR/utils
 
 # If numpy or scipy exists within requirements.txt then use binaries.
-if (grep -iq -e "numpy" -e "scipy" requirements.txt) then
+if (grep -iq -e "numpy" -e "scipy" req-heroku.txt) then
   puts-step "Noticed numpy/scipy. Bootstrapping prebuilt binaries."
   cd .heroku
 

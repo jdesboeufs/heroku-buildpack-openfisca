@@ -168,6 +168,11 @@ puts-step "Installing dependencies using Pip ($PIP_VERSION)"
 # Force scikit-learn to use a specific script
 source $BIN_DIR/steps/scikit-learn
 
+# Install Heroku-specific requirements
+if [ -f req-heroku.txt ]; then
+  /app/.heroku/python/bin/pip install --use-mirrors -r req-heroku.txt --exists-action=w --src=./.heroku/src | cleanup | indent
+fi
+
 # Actually install requirements
 /app/.heroku/python/bin/pip install --use-mirrors -r requirements.txt --exists-action=w --src=./.heroku/src | cleanup | indent
 
